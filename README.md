@@ -10,9 +10,7 @@ Used stack:
 - Spring MVC
 
 ### Schema
-
-![Tag switcher](schema.png)
-[//]: # (<img src="schema.png" alt="drawing" width="300" height="300"/>)
+<img src="schema.png" alt="drawing" width="500" height="500"/>
 
 Explanation:
 
