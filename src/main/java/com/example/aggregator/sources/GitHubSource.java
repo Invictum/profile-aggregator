@@ -2,7 +2,6 @@ package com.example.aggregator.sources;
 
 import com.example.aggregator.RepositoryData;
 import com.fasterxml.jackson.databind.JsonNode;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
@@ -32,7 +31,7 @@ public class GitHubSource implements RepositoriesDataSource {
         var repositories = new ArrayList<RepositoryData>();
         var url = "https://api.github.com/orgs/" + name + "/repos?per_page=50";
         while (url != null) {
-            var response = client.getForEntity(url, ArrayNode.class, name);
+            var response = client.getForEntity(url, JsonNode.class, name);
             if (response.getStatusCode() != HttpStatus.OK || response.getBody() == null) {
                 break;
             }

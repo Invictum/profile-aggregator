@@ -1,8 +1,8 @@
 package com.example.aggregator.sources;
 
 import com.example.aggregator.RepositoryData;
+import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import org.assertj.core.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mockito;
@@ -28,10 +28,10 @@ class GitHubSourceTest {
     @Test
     void loadForTeamTest() {
         // Prepare mocks
-        ResponseEntity<ArrayNode> response = Mockito.mock(ResponseEntity.class);
+        ResponseEntity<JsonNode> response = Mockito.mock(ResponseEntity.class);
         Mockito.when(client.getForEntity(
                         Mockito.any(),
-                        Mockito.eq(ArrayNode.class),
+                        Mockito.eq(JsonNode.class),
                         Mockito.eq("name")))
                 .thenReturn(response);
         Mockito.when(response.getStatusCode()).thenReturn(HttpStatus.OK);
