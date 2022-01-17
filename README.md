@@ -11,8 +11,8 @@ Used stack:
 
 ### Schema
 
-[//]: # (![Tag switcher]&#40;schema.png&#41;)
-<img src="schema.png" alt="drawing" width="300" height="300"/>
+![Tag switcher](schema.png)
+[//]: # (<img src="schema.png" alt="drawing" width="300" height="300"/>)
 
 Explanation:
 
